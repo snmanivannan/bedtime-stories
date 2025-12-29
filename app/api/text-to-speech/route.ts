@@ -19,9 +19,7 @@ const requestSchema = z.object({
   storyId: z.string().min(1, "Story ID is required"),
 });
 
-export async function POST(
-  request: NextRequest
-): Promise<NextResponse<TextToSpeechResponse | Blob>> {
+export async function POST(request: NextRequest) {
   try {
     // Check API key configuration
     if (!process.env.ELEVENLABS_API_KEY) {
