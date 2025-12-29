@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nextjs",
+  "regions": ["iad1"],
+  "functions": {
+    "app/api/generate-story/route.ts": {
+      "maxDuration": 60
+    },
+    "app/api/text-to-speech/route.ts": {
+      "maxDuration": 60
+    }
+  }
+}
